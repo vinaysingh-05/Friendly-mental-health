@@ -157,30 +157,32 @@ export function Footer() {
 
           {/* Resources Column */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3 className="font-bold text-lg mb-4">Resources</h3>
-            <ul className="space-y-2">
-              {[
-                'Crisis Helplines',
-                'Mental Health Guide',
-                'Privacy Policy',
-                'Terms of Service',
-                'FAQs',
-              ].map((item) => (
-                <li key={item}>
-                  <Link
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors hover:underline"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+        
+  initial={{ opacity: 0, y: 30 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.6, delay: 0.2 }}
+>
+  <h3 className="font-bold text-lg mb-4">Resources</h3>
+
+  <ul className="space-y-2">
+    {[
+      { name: "Mental Health Guide", link: "/mental-health-guide" },
+      { name: "Privacy Policy", link: "/privacy-policy" },
+      { name: "Terms of Service", link: "/terms" },
+      { name: "FAQs", link: "/faqs" },
+    ].map((item) => (
+      <li key={item.name}>
+        <Link
+          href={item.link}
+          className="text-gray-400 hover:text-white transition-colors hover:underline"
+        >
+          {item.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</motion.div>
+          
 
           {/* Support Column */}
           <motion.div
