@@ -38,9 +38,9 @@ export function HeroSection() {
 
   const badges = [
     { icon: Lock, text: 'End-to-End Encrypted' },
-    { icon: Heart, text: 'Powered by Claude AI' },
+    { icon: Heart, text: 'Powered by AI' },
     { icon: Zap, text: 'Instant Response' },
-    { icon: GraduationCap, text: 'Student-Focused' },
+    { icon: GraduationCap, text: 'Yourth-Focused' },
   ]
 
   return (
